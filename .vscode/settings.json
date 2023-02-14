@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "sms_gateway_android"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

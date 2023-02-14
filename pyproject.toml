@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["Hju Kneyck Flores <hju.halcyondigital@gmail.com>"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+plyer = "^2.1.0"
+pytest = "^7.2.1"
+starlite = {extras = ["redis"], version = "^1.51.1"}
+uvicorn = "^0.20.0"
+granian = "^0.2.6"
+pydantic = {extras = ["dotenv"], version = "^1.10.4"}
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+isort = "^5.12.0"
+ruff = "^0.0.246"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
