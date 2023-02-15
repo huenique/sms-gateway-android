@@ -15,7 +15,7 @@ class Termux:
 
     async def send_sms(
         self, number: str, message: str
-    ) -> subprocess.CompletedProcess[str]:
+    ) -> subprocess.CompletedProcess[bytes]:
         """Send an SMS message to a specified number.
 
         Args:
@@ -33,8 +33,9 @@ class Termux:
         command.append(message)
 
         loop = asyncio.get_running_loop()
-
-        proc = await loop.run_in_executor(None, subprocess.run, command)
+        proc = await loop.run_in_executor(
+            None, lambda _: subprocess.run(command, stdout=subprocess.DEVNULL)
+        )
         proc.check_returncode()
 
         return proc
