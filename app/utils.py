@@ -34,7 +34,7 @@ class Termux:
 
         loop = asyncio.get_running_loop()
         proc = await loop.run_in_executor(
-            None, lambda _: subprocess.run(command, stdout=subprocess.DEVNULL)
+            None, lambda: subprocess.run(command, stdout=subprocess.DEVNULL)
         )
         proc.check_returncode()
 
