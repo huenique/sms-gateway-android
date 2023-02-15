@@ -8,14 +8,14 @@ from app import utils
 TERMUX_SMS_API = ["termux-sms-send", "-n"]
 
 SMS_API = list[str] | None
-Termux_ = utils.Termux | None
+Termux = utils.Termux | None
 
 
 class MessageService:
-    termux: Termux_
+    termux: Termux
     sms_api: SMS_API
 
-    def __init__(self, termux: Termux_, sms_api: SMS_API = None):
+    def __init__(self, termux: Termux, sms_api: SMS_API = None):
         self.termux = termux
         self.sms_api = sms_api
 
@@ -63,7 +63,5 @@ class MessageService:
             )
 
     @classmethod
-    def create(
-        cls, termux: Termux_ = None, sms_api: SMS_API = None
-    ) -> "MessageService":
+    def create(cls, termux: Termux = None, sms_api: SMS_API = None) -> "MessageService":
         return cls(termux, sms_api)
