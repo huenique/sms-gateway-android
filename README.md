@@ -13,6 +13,14 @@ It sends SMS messages using your SIM card and [Termux-sms-send](https://wiki.ter
 
 ## Installation
 
+Before you begin, you have to install a distro that Rust supports. The project uses Rust modules for performance reasons, so you can't use the default Termux environment.
+
+Here's a one liner that installs a bash script wrapper for proot and the ubuntu distro: 
+
+```sh
+pkg install proot-distro && proot-distro install ubuntu && proot-distro login ubuntu
+```
+
 Clone the repository:
 
 ```sh
@@ -22,14 +30,6 @@ git clone https://github.com/hjuhalc/sms-gateway-android.git
 > You can install `git` on Termux using `pkg install git`.
 
 ## Setup
-
-Install a distro that Rust supports.
-
-Here's a one liner that installs a bash script wrapper for proot and the ubuntu distro: 
-
-```sh
-pkg install proot-distro && proot-distro install ubuntu && proot-distro login ubuntu
-```
 
 ### Using Make
 
