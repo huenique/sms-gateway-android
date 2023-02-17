@@ -1,6 +1,6 @@
 # Update Termux packages
 upgrade:
-	pkg upgrade
+	apt update && apt upgrade -y
 
 # Install Rust
 rust:
@@ -8,11 +8,11 @@ rust:
 
 # Install Python
 python:
-	pkg install python
+	apt install python3.11
 
 # Create Python virtual environment
 venv:
-	python -m venv venv
+	python3.11 -m venv venv
 
 # Activate the virtual environment
 activate: venv
@@ -33,4 +33,4 @@ ustart:
 # Default target, install everything
 all: upgrade rust python venv activate install
 
-.PHONY: upgrade rust python venv activate install all gstart
+.PHONY: upgrade rust python venv activate install gstart ustart all

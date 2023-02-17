@@ -27,11 +27,19 @@ Clone the repository:
 git clone https://github.com/hjuhalc/sms-gateway-android.git
 ```
 
+Then `cd` into the project directory:
+
+```sh
+cd sms-gateway-android
+```
+
 > You can install `git` on Termux using `pkg install git`.
 
 ## Setup
 
-### Using Make
+> NOTE: The instructions below are for the Ubuntu environment on Termux. If you're using a different distro, you have follow the instructions for your distro.
+
+### Using Make (Easy way)
 
 You can use the Makefile to install the dependencies and start the server.
 
@@ -50,7 +58,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 2. Install Python >=3.11:
 
 ```sh
-pkg install python
+apt install python3.11
 ```
 
 3. Create a Python virtual environment:
