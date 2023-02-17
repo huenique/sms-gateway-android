@@ -12,9 +12,10 @@ python:
 	curl -O https://www.python.org/ftp/python/3.11.2/Python-3.11.2.tar.xz
 	tar -xf Python-3.11.2.tar.xz
 	cd Python-3.11.2 && ./configure --enable-optimizations
-	make -j
-	make altinstall
+	make -C Python-3.11.2 -j 4
+	make altinstall Python-3.11.2
 	python3.11 -V
+	cd .. && rm -rf Python-3.11.2 Python-3.11.2.tar.xz
 
 # Create Python virtual environment
 venv:
