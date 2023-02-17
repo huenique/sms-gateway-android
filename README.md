@@ -4,6 +4,13 @@ An simple API gateway for sending SMS messages from Android devices.
 
 It sends SMS messages using your SIM card and [Termux-sms-send](https://wiki.termux.com/wiki/Termux-sms-send).
 
+## Prerequisites
+
+- [Termux](https://termux.com/)
+- [Termux:API](https://wiki.termux.com/wiki/Termux:API)
+
+> You can install Termux and Termux:API from [F-Droid](https://f-droid.org/en/).
+
 ## Installation
 
 Clone the repository:
