@@ -8,7 +8,7 @@ rust:
 
 # Install Python
 python:
-	apt install build-essential libssl-dev zlib1g-dev libncurses5-dev libncursesw5-dev libreadline-dev libsqlite3-dev libgdbm-dev libdb5.3-dev libbz2-dev libexpat1-dev liblzma-dev tk-dev libffi-dev openssl
+	apt install build-essential libssl-dev zlib1g-dev libncurses5-dev libncursesw5-dev libreadline-dev libsqlite3-dev libgdbm-dev libdb5.3-dev libbz2-dev libexpat1-dev liblzma-dev tk-dev libffi-dev openssl -y
 	curl -O https://www.python.org/ftp/python/3.11.2/Python-3.11.2.tar.xz
 	tar -xf Python-3.11.2.tar.xz
 	cd Python-3.11.2
