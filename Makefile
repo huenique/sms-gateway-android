@@ -2,6 +2,9 @@
 upgrade:
 	apt update && apt upgrade -y
 
+ngrok:
+	curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
+
 # Install Rust
 rust:
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -11,9 +14,7 @@ python:
 	apt install build-essential libssl-dev zlib1g-dev libncurses5-dev libncursesw5-dev libreadline-dev libsqlite3-dev libgdbm-dev libdb5.3-dev libbz2-dev libexpat1-dev liblzma-dev tk-dev libffi-dev openssl -y
 	curl -O https://www.python.org/ftp/python/3.11.2/Python-3.11.2.tar.xz
 	tar -xf Python-3.11.2.tar.xz
-	cd Python-3.11.2 && ./configure --enable-optimizations
-	make -C Python-3.11.2 -j 4
-	make altinstall Python-3.11.2
+	cd Python-3.11.2 && ./configure --enable-optimizations && make -j && make altinstall
 	python3.11 -V
 	cd .. && rm -rf Python-3.11.2 Python-3.11.2.tar.xz
 
