@@ -36,7 +36,7 @@ pkg install proot-distro && proot-distro install ubuntu && proot-distro login ub
 You can use the Makefile to install the dependencies and start the server.
 
 ```sh
-pkg install make && make install
+pkg install make && make all
 ```
 
 ### Manual
