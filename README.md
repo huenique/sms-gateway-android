@@ -53,17 +53,17 @@ apt install make && make all
 
 1. Install ngrok:
 
-```sh
-curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
-```
+    ```sh
+    curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
+    ```
 
-> You might want to create an [ngrok account](https://dashboard.ngrok.com/signup) to get a custom domain for your proxy or to eliminate the time limit.
+    > You might want to create an [ngrok account](https://dashboard.ngrok.com/signup) to get a custom domain for your proxy or to eliminate the time limit.
 
 2. Install Rust:
 
-```sh
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
+    ```sh
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    ```
 
 3. Install Python >=3.11:
 
@@ -104,21 +104,21 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 4. Create a Python virtual environment:
 
-```sh
-python3.11 -m venv venv
-```
+    ```sh
+    python3.11 -m venv venv
+    ```
 
 5. Activate the virtual environment:
 
-```sh
-source venv/bin/activate
-```
+    ```sh
+    source venv/bin/activate
+    ```
 
 6. Install the Python dependencies:
 
-```sh
-pip install -r requirements.txt
-```
+    ```sh
+    pip install -r requirements.txt
+    ```
 
 ## Running
 
