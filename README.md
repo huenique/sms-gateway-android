@@ -4,6 +4,16 @@ An simple API gateway for sending SMS messages from Android devices.
 
 It sends SMS messages using your SIM card and [Termux-sms-send](https://wiki.termux.com/wiki/Termux-sms-send).
 
+## Installation
+
+Clone the repository:
+
+```sh
+git clone https://github.com/hjuhalc/sms-gateway-android.git
+```
+
+> You can install `git` on Termux using `pkg install git`.
+
 ## Setup
 
 Install a distro that Rust supports.
