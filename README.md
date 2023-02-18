@@ -2,7 +2,7 @@
 
 A simple, self-hosted API Gateway that allows outside clients or services to send SMS messages using REST API endpoints.
 
-The gateway solely relies on the device's SIM card and [Termux-sms-send](https://wiki.termux.com/wiki/Termux-sms-send) and does not depend on other third-party services.
+For SMS messaging, the gateway solely relies on the device's SIM card and [Termux-sms-send](https://wiki.termux.com/wiki/Termux-sms-send) and does not depend on other third-party services.
 
 > For more information, see the [usage section](#usage).
 
