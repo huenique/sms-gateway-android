@@ -1,10 +1,12 @@
 # sms-gateway-android
 
-A simple API gateway for sending SMS messages from Android devices.
+A simple, self-hosted API Gateway that allows outside clients or services to send SMS messages using REST API endpoints.
 
-The gateway sends SMS messages using your SIM card and [Termux-sms-send](https://wiki.termux.com/wiki/Termux-sms-send).
+The gateway solely relies on the device's SIM card and [Termux-sms-send](https://wiki.termux.com/wiki/Termux-sms-send) and does not depend on other third-party services.
 
-For more information, see the [usage section](#usage).
+> For more information, see the [usage section](#usage).
+
+You can deploy and self-host it on Termux by following the installation instructions bellow.
 
 ## Prerequisites
 
