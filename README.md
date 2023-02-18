@@ -37,8 +37,6 @@ Then `cd` into the project directory:
 cd sms-gateway-android
 ```
 
-> You can install `git` on Termux using `pkg install git`.
-
 ## Setup
 
 > NOTE: The instructions below are for the Ubuntu environment on Termux. If you're using a different distro, you have follow the instructions for your distro.
